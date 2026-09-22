@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeFlick – Child Safety & CSAE Standards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:    #FF3B5C;
+      --red-dk: #d42f4e;
+      --bg:     #f7f7f8;
+      --white:  #ffffff;
+      --ink:    #1a1a1a;
+      --muted:  #6b7280;
+      --border: #e5e7eb;
+      --card:   #ffffff;
+      --pill-bg:#fff0f3;
+      --pill-bd:#ffc2ce;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #FF3B5C 0%, #ff6b35 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(24px, 5vw, 38px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 15px;
+      opacity: .88;
+      max-width: 540px;
+      margin: 0 auto 20px;
+    }
+    .hero-date {
+      font-size: 12px;
+      opacity: .7;
+      font-weight: 500;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 20px 64px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin: 32px 0 40px;
+    }
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      padding-left: 18px;
+    }
+    .toc li {
+      margin-bottom: 6px;
+    }
+    .toc a {
+      color: var(--red);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 36px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--red);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+    .card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ink);
+    }
+    .card p, .card li {
+      font-size: 14px;
+      color: #374151;
+      line-height: 1.65;
+    }
+    .card ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+    .card li { margin-bottom: 4px; }
+
+    /* ── GRID (2-col on wide) ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 560px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    /* ── ALERT BOX ── */
+    .alert {
+      border-left: 4px solid var(--red);
+      background: var(--pill-bg);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: #6b1224;
+      font-weight: 500;
+    }
+    .alert strong { color: var(--red-dk); }
+
+    /* ── PROCESS STEPS ── */
+    .steps { display: flex; flex-direction: column; gap: 0; }
+    .step {
+      display: flex;
+      gap: 16px;
+      padding: 16px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 0;
+      position: relative;
+    }
+    .step:first-child { border-radius: 12px 12px 0 0; }
+    .step:last-child  { border-radius: 0 0 12px 12px; }
+    .step + .step { border-top: none; }
+    .step-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--pill-bg);
+      border: 1.5px solid var(--pill-bd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-body h3 { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .step-body p  { font-size: 13.5px; color: #374151; }
+
+    /* ── CONTACT BOX ── */
+    .contact-box {
+      background: linear-gradient(135deg, #fff0f3, #fff7f0);
+      border: 1.5px solid var(--pill-bd);
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    .contact-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .contact-box p  { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    .contact-box a {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background .15s;
+    }
+    .contact-box a:hover { background: var(--red-dk); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer a { color: var(--red); text-decoration: none; }
+
+    /* ── PROSE ── */
+    .prose { font-size: 14px; color: #374151; line-height: 1.7; }
+    .prose + .prose { margin-top: 10px; }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🛡️ Child Safety Policy</div>
+  <h1>Child Safety &amp; CSAE Standards</h1>
+  <p>VibeFlick is committed to zero tolerance for child sexual abuse and exploitation. This page explains our standards, how we enforce them, and how to report concerns.</p>
+  <div class="hero-date">Effective Date: September 2026 &nbsp;·&nbsp; VibeFlick</div>
+</div>
+
+<div class="container">
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of Contents">
+    <h2>On This Page</h2>
+    <ol>
+      <li><a href="#zero-tolerance">Our Zero-Tolerance Commitment</a></li>
+      <li><a href="#prohibited">Prohibited Content &amp; Behaviour</a></li>
+      <li><a href="#detection">Detection &amp; Enforcement</a></li>
+      <li><a href="#reporting">How to Report</a></li>
+      <li><a href="#authorities">Reporting to Authorities</a></li>
+      <li><a href="#contact">Designated Contact</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. ZERO TOLERANCE -->
+  <div class="section" id="zero-tolerance">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Our Zero-Tolerance Commitment</h2>
+    </div>
+    <p class="prose">VibeFlick maintains an absolute zero-tolerance policy toward child sexual abuse and exploitation (CSAE) in any form. We are committed to protecting every child from harm on our platform and cooperating fully with law enforcement and regulatory authorities worldwide.</p>
+    <p class="prose" style="margin-top:10px">Our platform is intended for users aged 13 and older (or 18 where required by local law). Content involving the sexualisation, abuse, or exploitation of minors will be removed immediately and, where required, reported to the relevant national authorities and the National Center for Missing &amp; Exploited Children (NCMEC).</p>
+
+    <div class="alert" style="margin-top:16px">
+      <strong>Absolute policy:</strong> Any account found to upload, distribute, or solicit CSAE material will be permanently banned and reported to law enforcement — no exceptions, no appeals.
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- 2. PROHIBITED -->
+  <div class="section" id="prohibited">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Prohibited Content &amp; Behaviour</h2>
+    </div>
+    <p class="prose" style="margin-bottom:14px">The following are strictly prohibited on VibeFlick. Violations result in immediate permanent account termination and referral to authorities.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>🚫 Child Sexual Abuse Material (CSAM)</h3>
+        <p>Any image, video, audio, or text that sexually depicts, exploits, or abuses a minor — including AI-generated or cartoon content.</p>
+      </div>
+      <div class="card">
+        <h3>🚫 Grooming Behaviour</h3>
+        <p>Attempts to build inappropriate relationships with minors, including via direct messages, comments, or the Nearby feature.</p>
+      </div>
+      <div class="card">
+        <h3>🚫 Solicitation of Minors</h3>
+        <p>Requesting sexual content, personal information, or offline meetings from anyone who is or appears to be a minor.</p>
+      </div>
+      <div class="card">
+        <h3>🚫 Predatory Conduct</h3>
+        <p>Using any VibeFlick feature — including Nearby, voice clips, or private messages — to contact, target, or exploit minors.</p>
+      </div>
+      <div class="card">
+        <h3>🚫 Sexualised Minor Content</h3>
+        <p>Content that sexualises minors in any way, even without explicit imagery — including suggestive captions, descriptions, or role-play.</p>
+      </div>
+      <div class="card">
+        <h3>🚫 Facilitating CSAE</h3>
+        <p>Sharing links, codes, contacts, or any information that could be used to access, distribute, or facilitate child exploitation material.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- 3. DETECTION -->
+  <div class="section" id="detection">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Detection &amp; Enforcement</h2>
+    </div>
+    <p class="prose" style="margin-bottom:14px">VibeFlick uses a combination of automated technology and human review to detect and remove CSAE content.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">🔍</div>
+        <div class="step-body">
+          <h3>Automated Hash Matching</h3>
+          <p>We use PhotoDNA and industry-standard hash-matching technology to detect known CSAM before it is visible to any user.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon">👥</div>
+        <div class="step-body">
+          <h3>Human Trust &amp; Safety Review</h3>
+          <p>Reported content is reviewed by trained Trust &amp; Safety team members who assess context and severity within 24 hours.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon">🚨</div>
+        <div class="step-body">
+          <h3>Immediate Removal &amp; Account Action</h3>
+          <p>Violating content is removed immediately. Accounts are permanently banned. Evidence is preserved for law enforcement.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon">📋</div>
+        <div class="step-body">
+          <h3>Authority Reporting</h3>
+          <p>All confirmed CSAM is reported to NCMEC's CyberTipline and relevant national authorities as required by law, including in Sri Lanka, the US, and the EU.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- 4. REPORTING -->
+  <div class="section" id="reporting">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>How to Report</h2>
+    </div>
+    <p class="prose" style="margin-bottom:14px">If you see content or behaviour on VibeFlick that may involve child exploitation or abuse, please report it immediately using one of the methods below.</p>
+
+    <div class="card">
+      <h3>📱 Report In-App</h3>
+      <p>Tap the three-dot menu (⋮) on any post, comment, profile, or message → select <strong>Report</strong> → choose <strong>Child Safety</strong>. Reports are reviewed by our team within 24 hours.</p>
+    </div>
+    <div class="card">
+      <h3>✉️ Report by Email</h3>
+      <p>Send a detailed report — including the username, content link, and description — to <strong>officialvibeflickgx@gmail.com</strong> with the subject line <em>"Child Safety Report."</em> We treat all such reports as urgent.</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Your Report Is Confidential</h3>
+      <p>Reports are kept confidential. The reported user is never informed of who reported them. You will receive a confirmation response within 24–72 hours.</p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- 5. AUTHORITIES -->
+  <div class="section" id="authorities">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>Reporting to Authorities</h2>
+    </div>
+    <p class="prose" style="margin-bottom:14px">You can also report child exploitation directly to the relevant national or international authority. VibeFlick complies fully with all authority investigations and legal requests.</p>
+
+    <div class="card">
+      <h3>🌐 NCMEC CyberTipline (Global)</h3>
+      <ul>
+        <li>Website: <a href="https://www.cybertipline.org" target="_blank" rel="noopener" style="color:var(--red)">cybertipline.org</a></li>
+        <li>Accepts reports of online child sexual exploitation from anywhere in the world.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🇱🇰 Sri Lanka — National Child Protection Authority</h3>
+      <ul>
+        <li>Hotline: <strong>1929</strong></li>
+        <li>Website: <a href="https://www.ncpa.gov.lk" target="_blank" rel="noopener" style="color:var(--red)">ncpa.gov.lk</a></li>
+        <li>For reports within Sri Lanka, you may also contact the Sri Lanka Police Child Protection Unit.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🇪🇺 EU / International</h3>
+      <ul>
+        <li>Report to your country's national law enforcement or the Internet Watch Foundation (IWF) at <a href="https://www.iwf.org.uk" target="_blank" rel="noopener" style="color:var(--red)">iwf.org.uk</a>.</li>
+      </ul>
+    </div>
+
+    <div class="alert" style="margin-top:16px">
+      VibeFlick cooperates fully with law enforcement and will provide all requested data in connection with child safety investigations, as required by applicable law.
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- 6. CONTACT -->
+  <div class="section" id="contact">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Designated Contact</h2>
+    </div>
+    <p class="prose" style="margin-bottom:16px">VibeFlick has a designated point of contact for child safety matters who is ready and able to speak about our CSAM prevention practices and compliance. This contact is available to law enforcement, regulators, and partner organisations.</p>
+
+    <div class="contact-box">
+      <h3>Child Safety Contact</h3>
+      <p>For child safety enquiries, law enforcement requests, or CSAM prevention discussions, contact us directly.</p>
+      <a href="mailto:officialvibeflickgx@gmail.com">officialvibeflickgx@gmail.com</a>
+      <p style="margin-top:12px; font-size:12px; color:#9ca3af">Response within 24 hours for urgent child safety matters.</p>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>© 2026 VibeFlick &nbsp;·&nbsp; <a href="./index.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="./terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="./guidelines.html">Community Guidelines</a></p>
+  <p style="margin-top:6px">This policy may be updated periodically to reflect changes in law or platform practices.</p>
+</footer>
+
+</body>
+</html>
