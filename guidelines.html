@@ -1,698 +1,926 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VibeFlick Community Guidelines</title>
-<style>
-  :root {
-    --primary: #FF3B5C;
-    --primary-dark: #E62E4D;
-    --bg: #F7F7F9;
-    --card-bg: #FFFFFF;
-    --text-main: #1A1A1A;
-    --text-muted: #6B7280;
-    --border: #E5E7EB;
-    --warning-1: #D97706;
-    --warning-2: #EA580C;
-    --warning-3: #DC2626;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeFlick Community Guidelines</title>
+    <style>
+        :root {
+            --primary: #FF3B5C;
+            --primary-dark: #E62E4D;
+            --bg: #F7F7F9;
+            --card-bg: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-muted: #6B7280;
+            --border: #E5E7EB;
+            --warning-1: #D97706;
+            --warning-2: #EA580C;
+            --warning-3: #DC2626;
+        }
 
-  * {
-    box-sizing: border-box;
-  }
+        * {
+            box-sizing: border-box;
+        }
 
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text-main);
-    line-height: 1.6;
-  }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
 
-  header.hero {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: #fff;
-    padding: 48px 20px 40px;
-    text-align: center;
-  }
+        header.hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            padding: 48px 20px 40px;
+            text-align: center;
+        }
 
-  header.hero h1 {
-    margin: 0 0 8px;
-    font-size: 28px;
-    font-weight: 800;
-  }
+        header.hero h1 {
+            margin: 0 0 8px;
+            font-size: 28px;
+            font-weight: 800;
+        }
 
-  header.hero p {
-    margin: 4px 0;
-    font-size: 14px;
-    opacity: 0.95;
-  }
+        header.hero p {
+            margin: 4px 0;
+            font-size: 14px;
+            opacity: 0.95;
+        }
 
-  .container {
-    max-width: 760px;
-    margin: -24px auto 40px;
-    padding: 0 16px;
-  }
+        .container {
+            max-width: 760px;
+            margin: -24px auto 40px;
+            padding: 0 16px;
+        }
 
-  .card {
-    background: var(--card-bg);
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-    padding: 24px;
-    margin-bottom: 20px;
-    border: 1px solid var(--border);
-  }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
 
-  .intro-card {
-    margin-top: 0;
-  }
+        .intro-card {
+            margin-top: 0;
+        }
 
-  h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0 0 12px;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 12px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-  h2 .num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    background: var(--primary);
-    color: #fff;
-    border-radius: 50%;
-    font-size: 14px;
-    flex-shrink: 0;
-  }
+        h2 .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
 
-  h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 18px 0 8px;
-    color: var(--text-main);
-  }
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 18px 0 8px;
+            color: var(--text-main);
+        }
 
-  h4.subhead {
-    font-size: 14.5px;
-    font-weight: 700;
-    margin: 16px 0 6px;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+        h4.subhead {
+            font-size: 14.5px;
+            font-weight: 700;
+            margin: 16px 0 6px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-  p {
-    font-size: 14.5px;
-    color: #333;
-    margin: 8px 0;
-  }
+        p {
+            font-size: 14.5px;
+            color: #333;
+            margin: 8px 0;
+        }
 
-  ul, ol {
-    padding-left: 20px;
-    margin: 8px 0;
-  }
+        ul,
+        ol {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
 
-  li {
-    font-size: 14.5px;
-    margin: 6px 0;
-    color: #333;
-  }
+        li {
+            font-size: 14.5px;
+            margin: 6px 0;
+            color: #333;
+        }
 
-  .toc {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
+        .toc {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 6px;
+        }
 
-  .toc a {
-    text-decoration: none;
-    color: var(--primary-dark);
-    font-weight: 600;
-    font-size: 14.5px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: #FFF1F3;
-    display: block;
-  }
+        .toc a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 14.5px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: #FFF1F3;
+            display: block;
+        }
 
-  .toc a:hover {
-    background: #FFE1E6;
-  }
+        .toc a:hover {
+            background: #FFE1E6;
+        }
 
-  .age-banner {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #FFF7ED;
-    border: 1px solid #FED7AA;
-    border-radius: 10px;
-    padding: 12px 16px;
-    margin-bottom: 16px;
-  }
+        .age-banner {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #FFF7ED;
+            border: 1px solid #FED7AA;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+        }
 
-  .age-banner .emoji {
-    font-size: 20px;
-    line-height: 1;
-  }
+        .age-banner .emoji {
+            font-size: 20px;
+            line-height: 1;
+        }
 
-  .age-banner p {
-    margin: 0;
-    font-size: 13.5px;
-    color: #9A3412;
-    font-weight: 600;
-  }
+        .age-banner p {
+            margin: 0;
+            font-size: 13.5px;
+            color: #9A3412;
+            font-weight: 600;
+        }
 
-  .prohibited-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin-top: 12px;
-  }
+        .prohibited-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
 
-  .prohibited-item {
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--primary);
-    border-radius: 10px;
-    padding: 14px 16px;
-    background: #FAFAFA;
-  }
+        .prohibited-item {
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            border-radius: 10px;
+            padding: 14px 16px;
+            background: #FAFAFA;
+        }
 
-  .prohibited-item h4 {
-    margin: 0 0 6px;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text-main);
-  }
+        .prohibited-item h4 {
+            margin: 0 0 6px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
 
-  .prohibited-item p {
-    margin: 0;
-    font-size: 13.5px;
-    color: var(--text-muted);
-  }
+        .prohibited-item p {
+            margin: 0;
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
 
-  .callout {
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-top: 12px;
-    border: 1px solid;
-  }
+        .callout {
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-top: 12px;
+            border: 1px solid;
+        }
 
-  .callout.pink {
-    background: #FFF1F3;
-    border-color: #FFC9D2;
-  }
+        .callout.pink {
+            background: #FFF1F3;
+            border-color: #FFC9D2;
+        }
 
-  .callout.pink h4 {
-    color: var(--primary-dark);
-    margin: 0 0 6px;
-  }
+        .callout.pink h4 {
+            color: var(--primary-dark);
+            margin: 0 0 6px;
+        }
 
-  .callout.pink p {
-    margin: 0;
-    color: #7A2233;
-    font-size: 13.5px;
-  }
+        .callout.pink p {
+            margin: 0;
+            color: #7A2233;
+            font-size: 13.5px;
+        }
 
-  .safety-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin-top: 12px;
-  }
+        .safety-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
 
-  .safety-item {
-    background: #F0FDF4;
-    border: 1px solid #BBF7D0;
-    border-radius: 10px;
-    padding: 14px 16px;
-  }
+        .safety-item {
+            background: #F0FDF4;
+            border: 1px solid #BBF7D0;
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
 
-  .safety-item h4 {
-    margin: 0 0 6px;
-    font-size: 15px;
-    color: #166534;
-  }
+        .safety-item h4 {
+            margin: 0 0 6px;
+            font-size: 15px;
+            color: #166534;
+        }
 
-  .safety-item p {
-    margin: 0;
-    font-size: 13.5px;
-    color: #15803D;
-  }
+        .safety-item p {
+            margin: 0;
+            font-size: 13.5px;
+            color: #15803D;
+        }
 
-  .nearby-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-    margin-top: 12px;
-  }
+        .nearby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 12px;
+        }
 
-  .nearby-item {
-    border: 1px solid var(--border);
-    border-left: 4px solid #7C3AED;
-    border-radius: 10px;
-    padding: 14px 16px;
-    background: #FAF9FF;
-  }
+        .nearby-item {
+            border: 1px solid var(--border);
+            border-left: 4px solid #7C3AED;
+            border-radius: 10px;
+            padding: 14px 16px;
+            background: #FAF9FF;
+        }
 
-  .nearby-item h4 {
-    margin: 0 0 6px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #4C1D95;
-  }
+        .nearby-item h4 {
+            margin: 0 0 6px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #4C1D95;
+        }
 
-  .nearby-item p {
-    margin: 0;
-    font-size: 13.5px;
-    color: var(--text-muted);
-  }
+        .nearby-item p {
+            margin: 0;
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
 
-  .safety-disclaimer {
-    background: #FFFBEB;
-    border: 1px solid #FDE68A;
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-top: 14px;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-  }
+        .safety-disclaimer {
+            background: #FFFBEB;
+            border: 1px solid #FDE68A;
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
 
-  .safety-disclaimer .emoji {
-    font-size: 20px;
-    line-height: 1;
-  }
+        .safety-disclaimer .emoji {
+            font-size: 20px;
+            line-height: 1;
+        }
 
-  .safety-disclaimer p {
-    margin: 0;
-    font-size: 13.5px;
-    color: #78350F;
-  }
+        .safety-disclaimer p {
+            margin: 0;
+            font-size: 13.5px;
+            color: #78350F;
+        }
 
-  .algo-box {
-    background: #EEF2FF;
-    border: 1px solid #C7D2FE;
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-top: 12px;
-  }
+        .algo-box {
+            background: #EEF2FF;
+            border: 1px solid #C7D2FE;
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-top: 12px;
+        }
 
-  .algo-box h4 {
-    margin: 0 0 6px;
-    color: #3730A3;
-    font-size: 15px;
-  }
+        .algo-box h4 {
+            margin: 0 0 6px;
+            color: #3730A3;
+            font-size: 15px;
+        }
 
-  .algo-box p {
-    margin: 0;
-    font-size: 13.5px;
-    color: #4338CA;
-  }
+        .algo-box p {
+            margin: 0;
+            font-size: 13.5px;
+            color: #4338CA;
+        }
 
-  .strike-table {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 14px;
-  }
+        .strike-table {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 14px;
+        }
 
-  .strike-row {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    border-radius: 12px;
-    padding: 16px;
-    border: 1px solid var(--border);
-  }
+        .strike-row {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid var(--border);
+        }
 
-  .strike-row.s1 { background: #FFFBEB; border-color: #FDE68A; }
-  .strike-row.s2 { background: #FFF7ED; border-color: #FED7AA; }
-  .strike-row.s3 { background: #FEF2F2; border-color: #FECACA; }
+        .strike-row.s1 {
+            background: #FFFBEB;
+            border-color: #FDE68A;
+        }
 
-  .strike-badge {
-    flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 16px;
-    color: #fff;
-  }
+        .strike-row.s2 {
+            background: #FFF7ED;
+            border-color: #FED7AA;
+        }
 
-  .s1 .strike-badge { background: var(--warning-1); }
-  .s2 .strike-badge { background: var(--warning-2); }
-  .s3 .strike-badge { background: var(--warning-3); }
+        .strike-row.s3 {
+            background: #FEF2F2;
+            border-color: #FECACA;
+        }
 
-  .strike-content h4 {
-    margin: 0 0 4px;
-    font-size: 15.5px;
-    font-weight: 700;
-  }
+        .strike-badge {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+            color: #fff;
+        }
 
-  .strike-content p {
-    margin: 0;
-    font-size: 13.5px;
-    color: #444;
-  }
+        .s1 .strike-badge {
+            background: var(--warning-1);
+        }
 
-  .appeal-box {
-    background: #EFF6FF;
-    border: 1px solid #BFDBFE;
-    border-radius: 10px;
-    padding: 16px;
-    margin-top: 12px;
-  }
+        .s2 .strike-badge {
+            background: var(--warning-2);
+        }
 
-  .appeal-box h4 {
-    margin: 0 0 8px;
-    color: #1E40AF;
-    font-size: 15px;
-  }
+        .s3 .strike-badge {
+            background: var(--warning-3);
+        }
 
-  .contact-card {
-    text-align: center;
-    background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
-    color: #fff;
-  }
+        .strike-content h4 {
+            margin: 0 0 4px;
+            font-size: 15.5px;
+            font-weight: 700;
+        }
 
-  .contact-card h2 {
-    color: #fff;
-    justify-content: center;
-  }
+        .strike-content p {
+            margin: 0;
+            font-size: 13.5px;
+            color: #444;
+        }
 
-  .contact-card a.email-btn {
-    display: inline-block;
-    margin-top: 10px;
-    background: var(--primary);
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 28px;
-    border-radius: 24px;
-    font-weight: 700;
-    font-size: 14.5px;
-  }
+        .appeal-box {
+            background: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            border-radius: 10px;
+            padding: 16px;
+            margin-top: 12px;
+        }
 
-  footer {
-    text-align: center;
-    padding: 24px 16px 40px;
-    font-size: 12.5px;
-    color: var(--text-muted);
-  }
+        .appeal-box h4 {
+            margin: 0 0 8px;
+            color: #1E40AF;
+            font-size: 15px;
+        }
 
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 18px 0;
-  }
+        .contact-card {
+            text-align: center;
+            background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
+            color: #fff;
+        }
 
-  .badge-pill {
-    display: inline-block;
-    background: #E5E7EB;
-    color: #374151;
-    font-size: 11.5px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    letter-spacing: 0.3px;
-  }
+        .contact-card h2 {
+            color: #fff;
+            justify-content: center;
+        }
 
-  @media (max-width: 480px) {
-    header.hero h1 { font-size: 22px; }
-    .card { padding: 18px; border-radius: 12px; }
-    h2 { font-size: 18px; }
-  }
-</style>
+        .contact-card a.email-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 700;
+            font-size: 14.5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 16px 40px;
+            font-size: 12.5px;
+            color: var(--text-muted);
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 18px 0;
+        }
+
+        .badge-pill {
+            display: inline-block;
+            background: #E5E7EB;
+            color: #374151;
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 480px) {
+            header.hero h1 {
+                font-size: 22px;
+            }
+
+            .card {
+                padding: 18px;
+                border-radius: 12px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<header class="hero">
-  <h1>VibeFlick Community Guidelines</h1>
-  <p>Last Updated: 5 October 2026</p>
-  <p>Building a safe, respectful, and creative community</p>
-</header>
+    <header class="hero">
+        <h1>VibeFlick Community Guidelines</h1>
+        <p>Last Updated: 25 October 2026</p>
+        <p>Building a safe, respectful, and creative community</p>
+    </header>
 
-<div class="container">
+    <div class="container">
 
-  <!-- Intro -->
-  <div class="card intro-card">
-    <div class="age-banner">
-      <span class="emoji">🔞</span>
-      <p>You must be at least 13 years old (or 18, where required by local law) to use VibeFlick.</p>
-    </div>
-    <p>Welcome to VibeFlick! These Community Guidelines exist to keep our platform safe, respectful, and enjoyable for everyone who shares and discovers videos, photos, voice clips, and thoughts here. By using VibeFlick, you agree to follow these guidelines in addition to our Terms of Service and Privacy Policy.</p>
-    <p>We want VibeFlick to be a place where creativity thrives without fear of harassment, hate, or harm. Every rule below exists to protect our community — please take a moment to read through them.</p>
-    <div class="toc">
-      <a href="#prohibited">1. Prohibited Content</a>
-      <a href="#nearby">2. Location & Nearby Feature Safety</a>
-      <a href="#safety">3. User Safety Features</a>
-      <a href="#foryou">4. For You Feed & Recommendations</a>
-      <a href="#enforcement">5. Account Enforcement Policy</a>
-      <a href="#appeal">6. Appeal Process</a>
-      <a href="#posts">7. Posts (Text & Image Posts)</a>
-      <a href="#contact">8. Contact Us</a>
-    </div>
-  </div>
-
-  <!-- Section 1: Prohibited Content -->
-  <div class="card" id="prohibited">
-    <h2><span class="num">1</span>Prohibited Content</h2>
-    <p>The following types of content are strictly prohibited on VibeFlick — whether posted as a video, photo, voice clip, thought, or comment. Violations may result in content removal, account restrictions, or permanent bans, depending on severity.</p>
-
-    <div class="prohibited-grid">
-      <div class="prohibited-item">
-        <h4>🚫 Nudity & Explicit Content</h4>
-        <p>No sexually explicit content, pornography, or non-consensual intimate imagery. This includes nudity involving minors in any form, which will be immediately reported to relevant authorities.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🚫 Hate Speech</h4>
-        <p>No content that attacks, demeans, or incites violence against individuals or groups based on race, ethnicity, religion, gender, sexual orientation, disability, or nationality.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🚫 Cyberbullying & Harassment</h4>
-        <p>No targeted harassment, threats, doxxing, or repeated unwanted contact. This includes coordinated campaigns to demean or intimidate other users.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🚫 Violence & Self-Harm</h4>
-        <p>No content that promotes, glorifies, or provides instructions for self-harm, suicide, eating disorders, or acts of violence. We provide resources and support for users at risk.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🚫 Copyright Infringement</h4>
-        <p>No unauthorized use of copyrighted music, video, or images. Repeated infringement will result in account termination under our repeat-infringer policy.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🚫 Spam & Scams</h4>
-        <p>No fake engagement (bots, bought followers/likes), phishing links, fraudulent giveaways, or deceptive commercial content.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🚫 Impersonation</h4>
-        <p>No creating fake profiles that impersonate other individuals, public figures, or brands. Accounts that mislead others about their true identity or affiliation will be removed.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🚫 Dangerous Misinformation</h4>
-        <p>No spreading misleading false information or harmful rumors that could deceive the public or cause harm to society.</p>
-      </div>
-    </div>
-
-    <div class="callout pink">
-      <h4>🎙️ These rules apply fully to Voice & Audio Clips</h4>
-      <p>Voice posts, voice replies, and audio backgrounds are held to the exact same standard as videos and photos. Using a voice clip to hurl abusive language, make threats, spread hate speech, or harass another user is strictly prohibited — audio-only content is not a loophole. Reports on voice posts are reviewed by listening to the actual clip, and violations here carry the same strike consequences as any other content type.</p>
-    </div>
-  </div>
-
-  <!-- Section 2: Location & Nearby Feature Safety -->
-  <div class="card" id="nearby">
-    <h2><span class="num">2</span>Location & Nearby Feature Safety</h2>
-    <p>VibeFlick's <strong>Nearby</strong> feature shows you thoughts and posts from people physically close to you, based on your location. Because this feature involves real-world proximity, we hold it to an extra-strict safety standard.</p>
-
-    <div class="nearby-grid">
-      <div class="nearby-item">
-        <h4>🚷 Stalking & Harassment</h4>
-        <p>Using the Nearby feature to track, follow, monitor, or repeatedly show up around another user in real life is strictly prohibited. Using proximity information to intimidate, harass, or pressure someone is a severe violation and may result in an immediate permanent ban.</p>
-      </div>
-      <div class="nearby-item">
-        <h4>🔍 Doxxing & Privacy</h4>
-        <p>Publicly sharing another person's home address, workplace, daily routine, exact location, or other personal identifying information without their explicit consent is strictly prohibited — whether in a Nearby post, comment, voice clip, or direct message.</p>
-      </div>
-      <div class="nearby-item">
-        <h4>🕵️ Anonymous Misuse</h4>
-        <p>Anonymous Vibe posts in Nearby are meant for honest, low-pressure sharing — not as cover for harassment, threats, or revealing someone else's identity or location without consent. Anonymity does not exempt anyone from these guidelines.</p>
-      </div>
-      <div class="nearby-item">
-        <h4>📍 Location Accuracy</h4>
-        <p>Don't manipulate or spoof your location to gain unfair reach, impersonate presence in a place you're not in, or evade a location-based restriction or ban.</p>
-      </div>
-    </div>
-
-    <div class="safety-disclaimer">
-      <span class="emoji">⚠️</span>
-      <p><strong>Safety Disclaimer:</strong> VibeFlick's Nearby feature is designed to help you discover content from people around you, not to arrange in-person meetings. If you choose to meet someone you connected with through VibeFlick, you do so entirely at your own risk. Always meet in public places, tell a friend or family member where you're going, and trust your instincts. VibeFlick is not responsible for interactions that happen outside the app, and users are solely responsible for their own personal safety when meeting others in real life.</p>
-    </div>
-  </div>
-
-  <!-- Section 3: Safety Features -->
-  <div class="card" id="safety">
-    <h2><span class="num">3</span>User Safety Features</h2>
-    <p>VibeFlick provides built-in tools so you can control your experience and help keep the community safe.</p>
-
-    <div class="safety-features">
-      <div class="safety-item">
-        <h4>🚩 In-App Reporting</h4>
-        <p>Report any post, comment, voice clip, message, Nearby thought, or profile directly from within the app. Our Trust & Safety team reviews all reports and typically responds within 24 hours.</p>
-      </div>
-      <div class="safety-item">
-        <h4>🔒 Blocking</h4>
-        <p>Block any user to instantly stop them from viewing your profile, seeing your Nearby posts, contacting you, or interacting with your content. Blocked users are not notified.</p>
-      </div>
-      <div class="safety-item">
-        <h4>🔕 Mute & Restrict</h4>
-        <p>Mute accounts to hide their content without unfollowing, or restrict comments from specific users without them knowing.</p>
-      </div>
-      <div class="safety-item">
-        <h4>🔐 Privacy Controls</h4>
-        <p>Set your account to private, control who can message you, choose who sees your Nearby posts, and manage who can tag or mention you.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Section 4: For You Feed & Recommendations -->
-  <div class="card" id="foryou">
-    <h2><span class="num">4</span>For You Feed & Recommendations</h2>
-    <p>The <strong>For You</strong> feed uses an automated recommendation system to surface videos, photos, and voice posts we think you'll enjoy, based on signals like watch time, likes, and shares.</p>
-
-    <div class="algo-box">
-      <h4>🛡️ Borderline & violating content is filtered out of recommendations</h4>
-      <p>Content that violates these Community Guidelines is removed from the platform. Content that sits in a borderline or sensitive category — without clearly breaking a rule — is not amplified through the For You recommendation system, even if it remains visible on the creator's own profile. Our filtering happens automatically before a post is eligible for recommendation, and is continuously reviewed and improved.</p>
-    </div>
-
-    <p style="margin-top: 12px;">This means reach on VibeFlick is earned by creating positive, rule-following content — not by pushing the boundaries of what's allowed. If you believe your content was filtered from recommendations in error, you can reach out using the Appeal Process below.</p>
-  </div>
-
-  <!-- Section 5: Enforcement Policy -->
-  <div class="card" id="enforcement">
-    <h2><span class="num">5</span>Account Enforcement Policy</h2>
-    <p>VibeFlick uses a progressive strike system for most violations — across videos, photos, voice clips, Nearby posts, and comments alike. Severe violations (such as content involving child exploitation, credible threats of violence, stalking, or terrorism) may result in an immediate permanent ban without prior warning.</p>
-
-    <div class="strike-table">
-      <div class="strike-row s1">
-        <div class="strike-badge">1</div>
-        <div class="strike-content">
-          <h4>Strike 1 — Account Warning</h4>
-          <p>A first-time or minor violation results in content removal and a formal warning notice on your account. No posting restrictions apply, but repeated violations will escalate to Strike 2.</p>
+        <!-- Intro -->
+        <div class="card intro-card">
+            <div class="age-banner">
+                <span class="emoji">🔞</span>
+                <p>You must be at least 13 years old (or 18, where required by local law) to use VibeFlick.</p>
+            </div>
+            <p>Welcome to VibeFlick! These Community Guidelines exist to keep our platform safe, respectful, and
+                enjoyable for everyone who shares and discovers videos, photos, voice clips, thoughts, and rewards here.
+                By using
+                VibeFlick, you agree to follow these guidelines in addition to our Terms of Service and Privacy Policy.
+            </p>
+            <p>We want VibeFlick to be a place where creativity thrives without fear of harassment, hate, or harm. Every
+                rule below exists to protect our community — please take a moment to read through them.</p>
+            <div class="toc">
+                <a href="#prohibited">1. Prohibited Content</a>
+                <a href="#nearby">2. Location & Nearby Feature Safety</a>
+                <a href="#safety">3. User Safety Features</a>
+                <a href="#foryou">4. For You Feed & Recommendations</a>
+                <a href="#enforcement">5. Account Enforcement Policy</a>
+                <a href="#appeal">6. Appeal Process</a>
+                <a href="#posts">7. Posts (Text & Image Posts)</a>
+                <a href="#rewards">8. Rewards, Leaderboard & Gifting</a>
+                <a href="#contact">9. Contact Us</a>
+            </div>
         </div>
-      </div>
-      <div class="strike-row s2">
-        <div class="strike-badge">2</div>
-        <div class="strike-content">
-          <h4>Strike 2 — Temporary Posting Restriction</h4>
-          <p>A second violation results in a temporary restriction on posting, commenting, and messaging, typically lasting 3–14 days depending on severity. Your existing content remains visible unless it violates guidelines.</p>
+
+        <!-- Section 1: Prohibited Content -->
+        <div class="card" id="prohibited">
+            <h2><span class="num">1</span>Prohibited Content</h2>
+            <p>The following types of content are strictly prohibited on VibeFlick — whether posted as a video, photo,
+                voice clip, thought, or comment. Violations may result in content removal, account restrictions, or
+                permanent bans, depending on severity.</p>
+
+            <div class="prohibited-grid">
+                <div class="prohibited-item">
+                    <h4>🚫 Nudity & Explicit Content</h4>
+                    <p>No sexually explicit content, pornography, or non-consensual intimate imagery. This includes
+                        nudity involving minors in any form, which will be immediately reported to relevant authorities.
+                    </p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🚫 Hate Speech</h4>
+                    <p>No content that attacks, demeans, or incites violence against individuals or groups based on
+                        race, ethnicity, religion, gender, sexual orientation, disability, or nationality.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🚫 Cyberbullying & Harassment</h4>
+                    <p>No targeted harassment, threats, doxxing, or repeated unwanted contact. This includes coordinated
+                        campaigns to demean or intimidate other users.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🚫 Violence & Self-Harm</h4>
+                    <p>No content that promotes, glorifies, or provides instructions for self-harm, suicide, eating
+                        disorders, or acts of violence. We provide resources and support for users at risk.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🚫 Copyright Infringement</h4>
+                    <p>No unauthorized use of copyrighted music, video, or images. Repeated infringement will result in
+                        account termination under our repeat-infringer policy.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🚫 Spam & Scams</h4>
+                    <p>No fake engagement (bots, bought followers/likes), phishing links, fraudulent giveaways, or
+                        deceptive commercial content.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🚫 Impersonation</h4>
+                    <p>No creating fake profiles that impersonate other individuals, public figures, or brands. Accounts
+                        that mislead others about their true identity or affiliation will be removed.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🚫 Dangerous Misinformation</h4>
+                    <p>No spreading misleading false information or harmful rumors that could deceive the public or
+                        cause harm to society.</p>
+                </div>
+            </div>
+
+            <div class="callout pink">
+                <h4>🎙️ These rules apply fully to Voice & Audio Clips</h4>
+                <p>Voice posts, voice replies, and audio backgrounds are held to the exact same standard as videos and
+                    photos. Using a voice clip to hurl abusive language, make threats, spread hate speech, or harass
+                    another user is strictly prohibited — audio-only content is not a loophole. Reports on voice posts
+                    are reviewed by listening to the actual clip, and violations here carry the same strike consequences
+                    as any other content type.</p>
+            </div>
         </div>
-      </div>
-      <div class="strike-row s3">
-        <div class="strike-badge">3</div>
-        <div class="strike-content">
-          <h4>Strike 3 — Permanent Account Ban</h4>
-          <p>A third violation, or a single severe violation, results in permanent suspension of your VibeFlick account. Banned users may not create new accounts to circumvent this action.</p>
+
+        <!-- Section 2: Location & Nearby Feature Safety -->
+        <div class="card" id="nearby">
+            <h2><span class="num">2</span>Location & Nearby Feature Safety</h2>
+            <p>VibeFlick's <strong>Nearby</strong> feature shows you thoughts and posts from people physically close to
+                you, based on your location. Because this feature involves real-world proximity, we hold it to an
+                extra-strict safety standard.</p>
+
+            <div class="nearby-grid">
+                <div class="nearby-item">
+                    <h4>🚷 Stalking & Harassment</h4>
+                    <p>Using the Nearby feature to track, follow, monitor, or repeatedly show up around another user in
+                        real life is strictly prohibited. Using proximity information to intimidate, harass, or pressure
+                        someone is a severe violation and may result in an immediate permanent ban.</p>
+                </div>
+                <div class="nearby-item">
+                    <h4>🔍 Doxxing & Privacy</h4>
+                    <p>Publicly sharing another person's home address, workplace, daily routine, exact location, or
+                        other personal identifying information without their explicit consent is strictly prohibited —
+                        whether in a Nearby post, comment, voice clip, or direct message.</p>
+                </div>
+                <div class="nearby-item">
+                    <h4>🕵️ Anonymous Misuse</h4>
+                    <p>Anonymous Vibe posts in Nearby are meant for honest, low-pressure sharing — not as cover for
+                        harassment, threats, or revealing someone else's identity or location without consent. Anonymity
+                        does not exempt anyone from these guidelines.</p>
+                </div>
+                <div class="nearby-item">
+                    <h4>📍 Location Accuracy</h4>
+                    <p>Don't manipulate or spoof your location to gain unfair reach, impersonate presence in a place
+                        you're not in, or evade a location-based restriction or ban.</p>
+                </div>
+            </div>
+
+            <div class="safety-disclaimer">
+                <span class="emoji">⚠️</span>
+                <p><strong>Safety Disclaimer:</strong> VibeFlick's Nearby feature is designed to help you discover
+                    content from people around you, not to arrange in-person meetings. If you choose to meet someone you
+                    connected with through VibeFlick, you do so entirely at your own risk. Always meet in public places,
+                    tell a friend or family member where you're going, and trust your instincts. VibeFlick is not
+                    responsible for interactions that happen outside the app, and users are solely responsible for their
+                    own personal safety when meeting others in real life.</p>
+            </div>
         </div>
-      </div>
+
+        <!-- Section 3: Safety Features -->
+        <div class="card" id="safety">
+            <h2><span class="num">3</span>User Safety Features</h2>
+            <p>VibeFlick provides built-in tools so you can control your experience and help keep the community safe.
+            </p>
+
+            <div class="safety-features">
+                <div class="safety-item">
+                    <h4>🚩 In-App Reporting</h4>
+                    <p>Report any post, comment, voice clip, message, Nearby thought, or profile directly from within
+                        the app. Our Trust & Safety team reviews all reports and typically responds within 24 hours.</p>
+                </div>
+                <div class="safety-item">
+                    <h4>🔒 Blocking</h4>
+                    <p>Block any user to instantly stop them from viewing your profile, seeing your Nearby posts,
+                        contacting you, or interacting with your content. Blocked users are not notified.</p>
+                </div>
+                <div class="safety-item">
+                    <h4>🔕 Mute & Restrict</h4>
+                    <p>Mute accounts to hide their content without unfollowing, or restrict comments from specific users
+                        without them knowing.</p>
+                </div>
+                <div class="safety-item">
+                    <h4>🔐 Privacy Controls</h4>
+                    <p>Set your account to private, control who can message you, choose who sees your Nearby posts, and
+                        manage who can tag or mention you.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: For You Feed & Recommendations -->
+        <div class="card" id="foryou">
+            <h2><span class="num">4</span>For You Feed & Recommendations</h2>
+            <p>The <strong>For You</strong> feed uses an automated recommendation system to surface videos, photos, and
+                voice posts we think you'll enjoy, based on signals like watch time, likes, and shares.</p>
+
+            <div class="algo-box">
+                <h4>🛡️ Borderline & violating content is filtered out of recommendations</h4>
+                <p>Content that violates these Community Guidelines is removed from the platform. Content that sits in a
+                    borderline or sensitive category — without clearly breaking a rule — is not amplified through the
+                    For You recommendation system, even if it remains visible on the creator's own profile. Our
+                    filtering happens automatically before a post is eligible for recommendation, and is continuously
+                    reviewed and improved.</p>
+            </div>
+
+            <p style="margin-top: 12px;">This means reach on VibeFlick is earned by creating positive, rule-following
+                content — not by pushing the boundaries of what's allowed. If you believe your content was filtered from
+                recommendations in error, you can reach out using the Appeal Process below.</p>
+        </div>
+
+        <!-- Section 5: Enforcement Policy -->
+        <div class="card" id="enforcement">
+            <h2><span class="num">5</span>Account Enforcement Policy</h2>
+            <p>VibeFlick uses a progressive strike system for most violations — across videos, photos, voice clips,
+                Nearby posts,
+                comments, and rewards or gifting activity alike. Severe violations (such as content involving child
+                exploitation,
+                credible threats of violence, stalking, or terrorism) may result in an immediate permanent ban without
+                prior warning.</p>
+
+            <div class="strike-table">
+                <div class="strike-row s1">
+                    <div class="strike-badge">1</div>
+                    <div class="strike-content">
+                        <h4>Strike 1 — Account Warning</h4>
+                        <p>A first-time or minor violation results in content removal and a formal warning notice on
+                            your account. No posting restrictions apply, but repeated violations will escalate to Strike
+                            2.</p>
+                    </div>
+                </div>
+                <div class="strike-row s2">
+                    <div class="strike-badge">2</div>
+                    <div class="strike-content">
+                        <h4>Strike 2 — Temporary Posting Restriction</h4>
+                        <p>A second violation results in a temporary restriction on posting, commenting, and messaging,
+                            typically lasting 3–14 days depending on severity. Your existing content remains visible
+                            unless it violates guidelines.</p>
+                    </div>
+                </div>
+                <div class="strike-row s3">
+                    <div class="strike-badge">3</div>
+                    <div class="strike-content">
+                        <h4>Strike 3 — Permanent Account Ban</h4>
+                        <p>A third violation, or a single severe violation, results in permanent suspension of your
+                            VibeFlick account. Banned users may not create new accounts to circumvent this action.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+            <p><strong>Note:</strong> Strikes may expire after 90 days of good standing for minor (Strike 1) violations,
+                at VibeFlick's discretion. Strike expiration does not apply to severe or repeated violations, including
+                stalking, doxxing, or harassment through the Nearby feature.</p>
+        </div>
+
+        <!-- Section 6: Appeal Process -->
+        <div class="card" id="appeal">
+            <h2><span class="num">6</span>Appeal Process</h2>
+            <p>If you believe an enforcement action was taken in error, you have the right to appeal.</p>
+
+            <div class="appeal-box">
+                <h4>📱 Appeal via the App</h4>
+                <p>Go to <strong>Inbox → Account Notices</strong>, select the notice in question, and tap
+                    <strong>"Appeal this decision."</strong> Provide any context that supports your appeal. Our team
+                    reviews appeals within 24–72 hours.
+                </p>
+            </div>
+
+            <div class="appeal-box" style="margin-top: 12px; background:#F0FDF4; border-color:#BBF7D0;">
+                <h4 style="color:#166534;">✉️ Appeal via Email</h4>
+                <p style="color:#15803D;">Email <strong>support@vibeflick.com</strong> with your username, the
+                    notice/strike details, and an explanation. Include screenshots if available to help us investigate
+                    faster.</p>
+            </div>
+
+            <p style="margin-top:14px;">Decisions on permanent bans arising from severe violations (e.g., child safety,
+                terrorism, credible threats, stalking) are final and not eligible for appeal.</p>
+        </div>
+
+        <!-- Section 7: Posts (Text & Image Posts) -->
+        <div class="card" id="posts">
+            <h2><span class="num">7</span>Posts (Text & Image Posts)</h2>
+            <p>The <strong>Posts</strong> tab lets you share written posts, image posts, and colored text-card posts,
+                add hashtags, and choose a category (Poetry, Funny, Thoughts, Music, Story, or Motivation). Posts are
+                public: anyone using VibeFlick can view, react to, comment on, save, and share a link to your post. All
+                of the rules in Sections 1 and 2 apply to posts, comments, hashtags, and categories, and the strike
+                system in Section 5 applies to every violation on Posts.</p>
+
+            <div class="prohibited-grid">
+                <div class="prohibited-item">
+                    <h4>🖼️ Text Inside Images & Text Cards</h4>
+                    <p>Text on a colored background card or written inside a photo is treated exactly like written text.
+                        Hate speech, harassment, threats, explicit content, scams, or personal information are
+                        prohibited even when they appear only inside an image.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>©️ Original Work & Copyright</h4>
+                    <p>Do not post poems, stories, song lyrics, articles, or images created by someone else and present
+                        them as your own. Only share content you created or have permission to use. Copyright holders
+                        can report infringing posts for removal.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>#️⃣ Hashtags</h4>
+                    <p>Hashtags must not contain hate speech, explicit or sexual terms, or harassment, and must not be
+                        used to spam. Do not add unrelated or misleading hashtags to push your post into topics it does
+                        not belong to.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🏷️ Categories Are Not an Exemption</h4>
+                    <p>Choosing a category does not excuse a violation. "Funny" does not allow hate or bullying,
+                        "Poetry" and "Story" must not glorify or give instructions for self-harm, and "Motivation" must
+                        not be used for scams, "get rich quick" schemes, or dangerous diet or fitness advice.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🔐 Personal Information</h4>
+                    <p>Do not post another person's phone number, address, ID documents, private messages, or photos of
+                        them without their consent, in a post, a comment, or an image. This applies everywhere on
+                        VibeFlick, not only in Nearby.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🧒 Child Safety</h4>
+                    <p>Content that sexualizes, exploits, or endangers minors is strictly prohibited. This includes
+                        grooming, sexual or inappropriate contact with minors, and sharing images of minors in unsafe or
+                        exploitative ways. Such content is removed immediately and reported to the relevant authorities.
+                    </p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🤖 Fake Engagement</h4>
+                    <p>Do not use bots, fake accounts, purchased services, or mass follow/unfollow tactics to inflate
+                        likes, reactions, comments, saves, views, or followers on Posts.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🌐 Any Language</h4>
+                    <p>These rules apply to posts written in any language, including Sinhala, Tamil, English, or a mix
+                        of languages and spellings.</p>
+                </div>
+            </div>
+
+            <div class="callout pink">
+                <h4>🚩 Reporting & Moderation of Posts</h4>
+                <p>To report a post, tap the <strong>⋯ menu</strong> on the post and choose <strong>Report</strong>,
+                    then select a reason (for example Spam, Harassment, Nudity, Violence, Unsafe content involving
+                    minors, Hate, Copyright, Impersonation, Scam, Privacy violation, or False information) and add
+                    optional details. Each user can report a given post once. Submitting false reports or coordinating
+                    mass reports against someone is a violation of these guidelines. Our moderation team reviews every
+                    report and may remove the post without a strike, issue a Strike 1, 2, or 3 under Section 5, or
+                    dismiss the report if no violation is found. Deleting a post after it has been reported does not
+                    remove a strike that has already been issued.</p>
+            </div>
+
+            <div class="algo-box">
+                <h4>🕒 How the Posts Feed Works</h4>
+                <p>The Posts feed shows the newest posts first and is not part of the For You recommendation system
+                    described in Section 4. Posts that violate these guidelines are removed regardless of how they
+                    appear in the feed.</p>
+            </div>
+        </div>
+
+        <!-- Section 8: Rewards, Leaderboard & Gifting -->
+        <div class="card" id="rewards">
+            <h2><span class="num">8</span>Rewards, Leaderboard & Gifting</h2>
+            <p>VibeFlick lets you earn VCoins through tasks and daily check-ins, compete on the Leaderboard, and send
+                Virtual
+                Gifts to creators. Rewards are meant for people who genuinely enjoy the community. All rules in Sections
+                1 to 7
+                also apply to everything you do while earning, competing, or gifting. Taking part in the rewards
+                features is
+                optional, and no purchase is needed to earn VCoins or appear on the Leaderboard. See our Terms and
+                Conditions
+                (Leaderboard and Rewards Terms) for full details.</p>
+
+            <div class="prohibited-grid">
+                <div class="prohibited-item">
+                    <h4>🚫 Spam & Fake Activity</h4>
+                    <p>Do not post repeated letters, words, or meaningless comments (for example "aaaaa", "hihihi", or
+                        "....."),
+                        or copy-paste the same comment on many posts, just to earn VCoins. Rewards are given only for
+                        genuine
+                        activity.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🤖 Bots, Auto-Clickers & Emulators</h4>
+                    <p>Using bots, scripts, auto-clickers, macros, emulators, or any automation to watch, like, comment,
+                        share,
+                        check in, or invite is prohibited. Rewards must come from a real person using the real app on a
+                        real
+                        device.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>👥 Fake Accounts & Referral Abuse</h4>
+                    <p>Do not create fake, duplicate, or bot accounts, or invite your own other accounts, to collect
+                        invitation
+                        rewards. Referrals made with the same device, or to yourself, are not valid. The number of
+                        accounts that
+                        can be created from one device is limited.</p>
+                </div>
+                <div class="prohibited-item">
+                    <h4>🐞 Exploits & Trading</h4>
+                    <p>Do not abuse bugs or errors to gain VCoins, and do not sell, buy, or trade accounts, VCoins,
+                        ranks, or
+                        prizes. If you find a bug, please report it to us instead of using it.</p>
+                </div>
+            </div>
+
+            <h3>Fair Leaderboard Competition</h3>
+            <p>The Leaderboard must be a fair competition for everyone. Anyone who uses cheating methods to climb the
+                Leaderboard, including bots, automation, fake or duplicate accounts, exploiting bugs, using stolen or
+                unauthorized payment methods, or any other unfair method, may face the following actions, depending on
+                severity:
+            </p>
+            <ul>
+                <li>Removal of the VCoins gained unfairly, up to a full reset of your VCoin balance and rank, and
+                    removal from
+                    the Leaderboard.</li>
+                <li>Loss of any prize or payout connected to the cheating, and disqualification of the prize in favor of
+                    the
+                    next eligible user.</li>
+                <li>A strike on your account under Section 5, or a permanent ban of the account.</li>
+                <li>For serious or repeated cheating, a ban on the device used, so that new accounts cannot be created
+                    from that
+                    device to continue cheating.</li>
+            </ul>
+            <p>Buying VCoins or a Rank Boost is optional and does not guarantee a rank or a prize. Purchases made with
+                stolen or
+                unauthorized payment methods will be reversed, and the account may be banned.</p>
+
+            <div class="callout pink">
+                <h4>💬 Respectful Gifting & Interaction</h4>
+                <p>Virtual Gifts and comments must be sent in a respectful way. Do not send gifts together with, or in
+                    return
+                    for, abusive, obscene, sexual, or threatening messages or comments. Do not use gifts to pressure,
+                    harass,
+                    bribe, or manipulate a creator or another user, or to demand personal information, private photos,
+                    or
+                    meetings. Gifts must not be used for scams, fraud, money laundering, or to move value to another
+                    account.
+                    Obscene or threatening comments and gift messages are treated like any other violation of Section 1
+                    and may
+                    lead to removal, a strike, or a ban.</p>
+            </div>
+
+            <p style="margin-top:12px;">Gifts, once sent, cannot be undone, and may be removed or reversed if they were
+                sent as
+                part of a violation. Creator payouts (Cash-out) are available only to eligible VibeFlick Plus members
+                with an
+                account in good standing, and may be withheld or rejected if we find fraud, fake gifting, or other rule
+                violations.</p>
+
+            <div class="appeal-box">
+                <h4>📣 Reporting Cheating</h4>
+                <p>If you see someone cheating on the Leaderboard or misusing gifts, use the in-app Report option or
+                    contact us
+                    at <strong>support@vibeflick.com</strong>. Submitting false reports is also a violation of these
+                    guidelines.
+                    If you think a reward action was taken against you by mistake, you can appeal as described in
+                    Section 6.</p>
+            </div>
+        </div>
+
+        <!-- Section 9: Contact -->
+        <div class="card contact-card" id="contact">
+            <h2>Need Help?</h2>
+            <p>Our support team is here for you. Reach out anytime with questions about these guidelines or your
+                account.</p>
+            <a class="email-btn" href="mailto:support@vibeflick.com">support@vibeflick.com</a>
+        </div>
+
     </div>
 
-    <hr class="divider">
-    <p><strong>Note:</strong> Strikes may expire after 90 days of good standing for minor (Strike 1) violations, at VibeFlick's discretion. Strike expiration does not apply to severe or repeated violations, including stalking, doxxing, or harassment through the Nearby feature.</p>
-  </div>
-
-  <!-- Section 6: Appeal Process -->
-  <div class="card" id="appeal">
-    <h2><span class="num">6</span>Appeal Process</h2>
-    <p>If you believe an enforcement action was taken in error, you have the right to appeal.</p>
-
-    <div class="appeal-box">
-      <h4>📱 Appeal via the App</h4>
-      <p>Go to <strong>Inbox → Account Notices</strong>, select the notice in question, and tap <strong>"Appeal this decision."</strong> Provide any context that supports your appeal. Our team reviews appeals within 24–72 hours.</p>
-    </div>
-
-    <div class="appeal-box" style="margin-top: 12px; background:#F0FDF4; border-color:#BBF7D0;">
-      <h4 style="color:#166534;">✉️ Appeal via Email</h4>
-      <p style="color:#15803D;">Email <strong>support@vibeflick.com</strong> with your username, the notice/strike details, and an explanation. Include screenshots if available to help us investigate faster.</p>
-    </div>
-
-    <p style="margin-top:14px;">Decisions on permanent bans arising from severe violations (e.g., child safety, terrorism, credible threats, stalking) are final and not eligible for appeal.</p>
-  </div>
-
-  <!-- Section 7: Posts (Text & Image Posts) -->
-  <div class="card" id="posts">
-    <h2><span class="num">7</span>Posts (Text & Image Posts)</h2>
-    <p>The <strong>Posts</strong> tab lets you share written posts, image posts, and colored text-card posts, add hashtags, and choose a category (Poetry, Funny, Thoughts, Music, Story, or Motivation). Posts are public: anyone using VibeFlick can view, react to, comment on, save, and share a link to your post. All of the rules in Sections 1 and 2 apply to posts, comments, hashtags, and categories, and the strike system in Section 5 applies to every violation on Posts.</p>
-
-    <div class="prohibited-grid">
-      <div class="prohibited-item">
-        <h4>🖼️ Text Inside Images & Text Cards</h4>
-        <p>Text on a colored background card or written inside a photo is treated exactly like written text. Hate speech, harassment, threats, explicit content, scams, or personal information are prohibited even when they appear only inside an image.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>©️ Original Work & Copyright</h4>
-        <p>Do not post poems, stories, song lyrics, articles, or images created by someone else and present them as your own. Only share content you created or have permission to use. Copyright holders can report infringing posts for removal.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>#️⃣ Hashtags</h4>
-        <p>Hashtags must not contain hate speech, explicit or sexual terms, or harassment, and must not be used to spam. Do not add unrelated or misleading hashtags to push your post into topics it does not belong to.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🏷️ Categories Are Not an Exemption</h4>
-        <p>Choosing a category does not excuse a violation. "Funny" does not allow hate or bullying, "Poetry" and "Story" must not glorify or give instructions for self-harm, and "Motivation" must not be used for scams, "get rich quick" schemes, or dangerous diet or fitness advice.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🔐 Personal Information</h4>
-        <p>Do not post another person's phone number, address, ID documents, private messages, or photos of them without their consent, in a post, a comment, or an image. This applies everywhere on VibeFlick, not only in Nearby.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🧒 Child Safety</h4>
-        <p>Content that sexualizes, exploits, or endangers minors is strictly prohibited. This includes grooming, sexual or inappropriate contact with minors, and sharing images of minors in unsafe or exploitative ways. Such content is removed immediately and reported to the relevant authorities.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🤖 Fake Engagement</h4>
-        <p>Do not use bots, fake accounts, purchased services, or mass follow/unfollow tactics to inflate likes, reactions, comments, saves, views, or followers on Posts.</p>
-      </div>
-      <div class="prohibited-item">
-        <h4>🌐 Any Language</h4>
-        <p>These rules apply to posts written in any language, including Sinhala, Tamil, English, or a mix of languages and spellings.</p>
-      </div>
-    </div>
-
-    <div class="callout pink">
-      <h4>🚩 Reporting & Moderation of Posts</h4>
-      <p>To report a post, tap the <strong>⋯ menu</strong> on the post and choose <strong>Report</strong>, then select a reason (for example Spam, Harassment, Nudity, Violence, Unsafe content involving minors, Hate, Copyright, Impersonation, Scam, Privacy violation, or False information) and add optional details. Each user can report a given post once. Submitting false reports or coordinating mass reports against someone is a violation of these guidelines. Our moderation team reviews every report and may remove the post without a strike, issue a Strike 1, 2, or 3 under Section 5, or dismiss the report if no violation is found. Deleting a post after it has been reported does not remove a strike that has already been issued.</p>
-    </div>
-
-    <div class="algo-box">
-      <h4>🕒 How the Posts Feed Works</h4>
-      <p>The Posts feed shows the newest posts first and is not part of the For You recommendation system described in Section 4. Posts that violate these guidelines are removed regardless of how they appear in the feed.</p>
-    </div>
-  </div>
-
-  <!-- Section 8: Contact -->
-  <div class="card contact-card" id="contact">
-    <h2>Need Help?</h2>
-    <p>Our support team is here for you. Reach out anytime with questions about these guidelines or your account.</p>
-    <a class="email-btn" href="mailto:support@vibeflick.com">support@vibeflick.com</a>
-  </div>
-
-</div>
-
-<footer>
-  <p>© 2026 VibeFlick. All rights reserved.</p>
-  <p>These Community Guidelines may be updated periodically. Continued use of VibeFlick constitutes acceptance of the current guidelines.</p>
-</footer>
+    <footer>
+        <p>© 2026 VibeFlick. All rights reserved.</p>
+        <p>These Community Guidelines may be updated periodically. Continued use of VibeFlick constitutes acceptance of
+            the current guidelines.</p>
+    </footer>
 
 </body>
+
 </html>
