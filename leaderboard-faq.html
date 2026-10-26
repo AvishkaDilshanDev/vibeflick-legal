@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard &amp; Rewards FAQ – VibeFlick</title>
+<meta name="description" content="How the VibeFlick Leaderboard, daily check-in, tasks, VCoins, gifts and prizes work.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--ac:#FF3B5C;--ac2:#FF6B80;--bg:#0F0F0F;--card:#1A1A1A;--line:#2A2A2A;--tx:#fff;--mut:#9A9A9A;--gold:#FFC53D;--ok:#2ECC71}
+@media(prefers-color-scheme:light){:root{--bg:#fff;--card:#F5F5F7;--line:#E4E4E8;--tx:#111;--mut:#6B6B73}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:15px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--ac);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-weight:800;font-size:19px;color:var(--ac);letter-spacing:-.3px}
+.logo span{color:var(--tx);font-weight:600;font-size:14px;margin-left:8px}
+.hero{padding:54px 0 30px;text-align:center}
+.podium{display:flex;align-items:flex-end;justify-content:center;gap:10px;height:120px;margin-bottom:26px}
+.podium div{width:74px;border-radius:14px 14px 0 0;display:flex;flex-direction:column;align-items:center;padding-top:10px;font-weight:800;color:#fff}
+.podium small{font-weight:600;font-size:11px;opacity:.9}
+.p1{height:120px;background:linear-gradient(var(--ac2),var(--ac))}
+.p2{height:88px;background:color-mix(in srgb,var(--ac) 60%,var(--card))}
+.p3{height:68px;background:color-mix(in srgb,var(--ac) 38%,var(--card))}
+h1{font-size:clamp(28px,6vw,42px);line-height:1.12;font-weight:800;letter-spacing:-1px}
+.hero p{color:var(--mut);max-width:520px;margin:14px auto 0}
+.search{position:relative;margin:28px auto 0;max-width:520px}
+.search input{width:100%;padding:15px 18px 15px 46px;border-radius:30px;border:1px solid var(--line);background:var(--card);color:var(--tx);font:inherit}
+.search input:focus{border-color:var(--ac);outline:none}
+.search svg{position:absolute;left:17px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--mut)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0 6px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--mut);padding:8px 16px;border-radius:24px;font:600 13px inherit;font-family:inherit;cursor:pointer}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.sec{margin-top:34px}
+.sec>h2{font-size:19px;font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.sec>h2:before{content:"";width:4px;height:20px;border-radius:2px;background:var(--ac)}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;transition:border-color .2s}
+details[open]{border-color:color-mix(in srgb,var(--ac) 60%,var(--line))}
+summary{list-style:none;cursor:pointer;padding:16px 18px;font-weight:700;display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";flex:none;width:26px;height:26px;border-radius:50%;background:color-mix(in srgb,var(--ac) 16%,transparent);color:var(--ac);display:grid;place-items:center;font-size:18px;font-weight:600;transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+.ans{padding:0 18px 18px;color:var(--mut)}
+.ans p+p,.ans ul,.ans .tbl{margin-top:10px}
+.ans ul{padding-left:20px}.ans li{margin:4px 0}
+.ans b{color:var(--tx)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:340px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--tx);background:color-mix(in srgb,var(--ac) 10%,transparent);font-weight:700}
+tr:last-child td{border-bottom:0}
+td.n{color:var(--tx);font-weight:700}
+.streak{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.streak div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 2px;text-align:center;font-size:12px}
+.streak b{display:block;color:var(--tx);font-size:15px}
+.note{border-left:3px solid var(--ac);background:color-mix(in srgb,var(--ac) 8%,transparent);padding:10px 14px;border-radius:0 10px 10px 0;margin-top:10px;color:var(--tx);font-size:14px}
+.empty{display:none;text-align:center;color:var(--mut);padding:40px 0}
+footer{margin-top:50px;border-top:1px solid var(--line);padding:30px 0 50px;color:var(--mut);font-size:13px;text-align:center}
+footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;font-weight:600}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="logo">VibeFlick<span>Help Center</span></div><a href="mailto:officialvibeflickgx@gmail.com" style="font-size:13px;font-weight:600">Contact support</a></div></header>
+
+<main class="wrap">
+<section class="hero">
+  <div class="podium" aria-hidden="true"><div class="p2">2<small>5 pts</small></div><div class="p1">1<small>10 pts</small></div><div class="p3">3<small>3 pts</small></div></div>
+  <h1>Leaderboard &amp; Rewards FAQ</h1>
+  <p>Everything about earning VCoins, climbing the ranks and winning daily prizes on VibeFlick.</p>
+  <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+  <input id="q" type="search" placeholder="Search questions, e.g. “check-in”, “prize”, “Plus”" aria-label="Search FAQ"></div>
+  <div class="chips" id="chips"></div>
+</section>
+
+<div id="faq">
+
+<section class="sec" data-cat="Leaderboard"><h2>Leaderboard</h2>
+<details><summary>What is the Leaderboard?</summary><div class="ans"><p>The Leaderboard ranks users by how many VCoins they earn. It has two views: <b>Today</b> and <b>All-time</b>. The top 50 users are listed, and your own rank is always shown to you.</p></div></details>
+<details><summary>What is the difference between Today and All-time?</summary><div class="ans"><ul><li><b>Today</b> counts only VCoins added on the current day. It resets at midnight, Sri Lanka time (Asia/Colombo).</li><li><b>All-time</b> counts every VCoin added to your account since you joined.</li></ul></div></details>
+<details><summary>What counts towards my rank?</summary><div class="ans"><p>VCoins credited to you: daily check-ins, tasks, friend invitations and VCoins you buy. Gifts you send do not add to your rank.</p></div></details>
+<details><summary>How do rank points work?</summary><div class="ans"><p>Each rank earns daily points:</p>
+<div class="tbl"><table><tr><th>Rank</th><th>Points</th></tr><tr><td class="n">#1</td><td>10</td></tr><tr><td class="n">#2</td><td>5</td></tr><tr><td class="n">#3</td><td>3</td></tr><tr><td class="n">#4 – #10</td><td>2</td></tr><tr><td class="n">#11 and below</td><td>1</td></tr></table></div></div></details>
+<details><summary>What happens if two users have the same VCoins?</summary><div class="ans"><p>The tie is broken automatically by our system, so every user always has a single, unique rank.</p></div></details>
+<details><summary>Why did my rank not change right away?</summary><div class="ans"><p>The Leaderboard refreshes periodically, so it can lag by a short time. Ranks can change at any moment as other users earn VCoins.</p></div></details>
+<details><summary>What can other users see about me?</summary><div class="ans"><p>If you earn VCoins, your <b>username, profile picture, verified badge (if any), VCoin total, rank and points</b> can appear on the Leaderboard. Others can also open a limited <b>Progress</b> view with your daily VCoin totals and points.</p><p>They cannot see which posts you viewed or the specific activities you performed.</p></div></details>
+<details><summary>What is the Progress view?</summary><div class="ans"><p>It shows a user's recent days: VCoins earned and points for each day. Your own Progress panel shows your last 7 days and your total VCoins. Tap a user on the Leaderboard to view theirs, three days at a time.</p></div></details>
+</section>
+
+<section class="sec" data-cat="Prizes"><h2>Prizes</h2>
+<details><summary>What prizes can I win?</summary><div class="ans"><div class="tbl"><table><tr><th>Daily rank</th><th>Prize</th></tr><tr><td class="n">#1</td><td>iPhone 17 Pro</td></tr><tr><td class="n">#2</td><td>US$100 Gift Card</td></tr><tr><td class="n">#3</td><td>VibeFlick Plus subscription</td></tr></table></div>
+<p>Prizes can be changed, replaced with an equivalent or withdrawn. The app always shows the current prizes.</p></div></details>
+<details><summary>How are winners chosen?</summary><div class="ans"><p>The top three users of each completed day (Sri Lanka time) are recorded as winners.</p></div></details>
+<details><summary>How will I know if I won?</summary><div class="ans"><p>Winners get an in-app notification and an email to their account address. Keep your email accurate and check your notifications.</p></div></details>
+<details><summary>How do I claim my prize?</summary><div class="ans"><p>Before delivery we may verify your identity, age and country, and confirm your VCoins were earned fairly. Prizes may not be available in every country. Winners under 18 need a parent or guardian's consent. Prizes are non-transferable, have no cash alternative, and winners are responsible for any taxes or fees.</p></div></details>
+<details><summary>Can a prize be taken away?</summary><div class="ans"><p>Yes. If we reasonably believe the rules were broken, we can disqualify the user and award the prize to the next eligible user.</p></div></details>
+</section>
+
+<section class="sec" data-cat="VCoins"><h2>VCoins &amp; Wallet</h2>
+<details><summary>What are VCoins (PCoins)?</summary><div class="ans"><p>Virtual points that exist only inside VibeFlick. They are not money, have no cash value and cannot be sold or traded outside the app. VCoins and PCoins are the same thing.</p></div></details>
+<details><summary>What does “pending” mean?</summary><div class="ans"><p>Coins from tasks first appear as <b>pending</b>. Swipe the “To Wallet” slider to move them into your Wallet. Check-in rewards, the profile and first-upload bonuses, invitations and purchases go straight to your Wallet.</p></div></details>
+<details><summary>Can my pending coins expire?</summary><div class="ans"><p>If you do not open VibeFlick for <b>20 days</b>, your pending VCoins may reset. VCoins already in your Wallet are safe.</p></div></details>
+<details><summary>My balance looks different from what I expected.</summary><div class="ans"><p>The balance is based on our server records. If there is a difference, our records prevail. Pull down to refresh, or contact us if it still looks wrong.</p></div></details>
+</section>
+
+<section class="sec" data-cat="Daily check-in"><h2>Daily check-in</h2>
+<details><summary>How much do I earn from check-in?</summary><div class="ans"><p>The reward grows with every consecutive day:</p>
+<div class="streak"><div>Day 1<b>20</b></div><div>Day 2<b>40</b></div><div>Day 3<b>60</b></div><div>Day 4<b>80</b></div><div>Day 5<b>100</b></div><div>Day 6<b>120</b></div><div>Day 7<b>200</b></div></div>
+<div class="tbl"><table><tr><th>Streak day</th><th>VCoins</th></tr><tr><td class="n">8 – 14</td><td>200</td></tr><tr><td class="n">15 – 30</td><td>250</td></tr><tr><td class="n">31 – 49</td><td>300</td></tr><tr><td class="n">50</td><td>500</td></tr></table></div>
+<p>Plus members earn <b>5×</b> these amounts.</p></div></details>
+<details><summary>What if I miss a day?</summary><div class="ans"><p>Your streak resets to Day 1. After Day 50, the cycle starts again.</p></div></details>
+</section>
+
+<section class="sec" data-cat="Tasks"><h2>Tasks</h2>
+<details><summary>How do I earn VCoins from tasks?</summary><div class="ans"><div class="tbl"><table><tr><th>Task</th><th>Free</th><th>Plus</th><th>Daily limit</th></tr>
+<tr><td class="n">Watch a vibe</td><td>1</td><td>5</td><td>50</td></tr>
+<tr><td class="n">Like a vibe</td><td>2</td><td>10</td><td>20</td></tr>
+<tr><td class="n">Comment</td><td>3</td><td>15</td><td>3</td></tr>
+<tr><td class="n">Share</td><td>4</td><td>20</td><td>5</td></tr>
+<tr><td class="n">First upload</td><td>20</td><td>200</td><td>one-time</td></tr>
+<tr><td class="n">Complete profile</td><td>50</td><td>50</td><td>one-time</td></tr></table></div>
+<p>Amounts shown in the app at the time you act are the ones that apply.</p></div></details>
+<details><summary>Is there a daily cap?</summary><div class="ans"><p>Yes. Task earnings are capped at <b>500 VCoins per day for free accounts</b> and <b>5,000 for VibeFlick Plus members</b>. Once you reach it, more task activity that day earns nothing extra. The one-time profile bonus is not part of the cap. Check-ins and invitations are separate.</p></div></details>
+<details><summary>Why didn't I get coins for a task?</summary><div class="ans"><p>Rewards are verified by our servers. Common reasons:</p><ul><li>You already earned from that post (each post rewards once).</li><li>It was your own post (liking or commenting on your own posts earns nothing).</li><li>The comment was too short, repeated characters or posted too long ago. Comments must be genuine and recent.</li><li>You reached the daily limit for that task, or the overall daily cap.</li></ul></div></details>
+<details><summary>What do I need for the profile bonus?</summary><div class="ans"><p>Every profile field must be filled in: name, username, email, bio, birthday, region, <b>profile photo</b> and <b>cover photo</b>. The app tells you which one is missing.</p></div></details>
+</section>
+
+<section class="sec" data-cat="Invites"><h2>Inviting friends</h2>
+<details><summary>How does inviting work?</summary><div class="ans"><p>Share your invite link from <b>Invite Friends</b>. When a new user installs through it and signs up, they are recorded as a pending referral. You both receive <b>200 VCoins</b> (2,000 for you if you are a Plus member) after the new user claims their <b>first daily check-in</b>.</p></div></details>
+<details><summary>Why was my invitation not rewarded?</summary><div class="ans"><p>A referral is not valid if the account is not genuinely new, if both accounts use the same device, or if you invite yourself. A limit on paid invitations per 24 hours also applies, and any above it may not be rewarded.</p></div></details>
+</section>
+
+<section class="sec" data-cat="Purchases"><h2>Buying VCoins &amp; Rank Boost</h2>
+<details><summary>Do I need to buy anything to rank?</summary><div class="ans"><p>No. Everything is optional, and you can earn VCoins and appear on the Leaderboard for free.</p></div></details>
+<details><summary>What is Rank Boost?</summary><div class="ans"><p>An optional purchase that adds the VCoins needed to reach the target rank shown at the time you buy (with a minimum amount). It does not guarantee a rank or a prize, because other users keep earning and ranks can change afterwards. It only appears when you are below the target.</p></div></details>
+<details><summary>I was charged but got no VCoins.</summary><div class="ans"><p>Purchases are verified with Google Play before coins are added. If your connection dropped, the app retries automatically the next time you open <b>Buy PCoins</b>. If nothing arrives, email us your Google Play order details.</p></div></details>
+<details><summary>Can I get a refund?</summary><div class="ans"><p>Purchases are final except where required by law or Google Play policy. If Google Play refunds or reverses a purchase, the related VCoins may be removed from your balance (never below zero).</p></div></details>
+</section>
+
+<section class="sec" data-cat="Plus"><h2>VibeFlick Plus</h2>
+<details><summary>What do I get with Plus?</summary><div class="ans"><ul><li>Higher task rewards (5×) and check-in rewards (5×)</li><li>A higher daily task cap (5,000)</li><li>2,000 VCoins per successful invitation</li><li>Cash-out access, a premium badge and profile styles</li></ul><p>Benefits apply only while your subscription is active. Subscriptions are billed through Google Play, and a free trial is limited to one per eligible user and device.</p></div></details>
+</section>
+
+<section class="sec" data-cat="Gifts"><h2>Gifts &amp; Cash-out</h2>
+<details><summary>How do gifts work?</summary><div class="ans"><p>You can spend VCoins on virtual gifts for creators. Prices are shown in the app, a daily spending limit applies, and a sent gift cannot be undone. Creators receive <b>diamonds</b>, and they can see who sent the gift.</p></div></details>
+<details><summary>How do I cash out?</summary><div class="ans"><ul><li>Cash-out is for <b>Plus members</b> with an account in good standing.</li><li>You need at least <b>US$10.00</b> worth of diamonds.</li><li>Pay-out options: bank, PayPal, Payoneer or wallet.</li><li>Requests are reviewed manually. If rejected, your diamonds are returned.</li><li>Only one request can be pending at a time.</li></ul><p>The amount paid is the creator's share shown in the app. The rest covers platform and store fees. You are responsible for any taxes.</p></div></details>
+</section>
+
+<section class="sec" data-cat="Fair play"><h2>Fair play</h2>
+<details><summary>What is not allowed?</summary><div class="ans"><ul><li>Bots, scripts, emulators or any automation to earn VCoins</li><li>Multiple or fake accounts (the number of accounts per device is limited)</li><li>Fake or repetitive likes, comments or views</li><li>Abusing invitations or exploiting bugs</li><li>Trading or selling accounts, VCoins or ranks</li><li>Using a stolen or unauthorised payment method</li></ul></div></details>
+<details><summary>What happens if I break the rules?</summary><div class="ans"><p>We may remove VCoins and rewards, reset your streak, remove you from the Leaderboard, withhold prizes or payouts, restrict or suspend the account and block the device. Serious or repeated violations of the <a href="https://avishkadilshandev.github.io/vibeflick-legal/guidelines.html">Community Guidelines</a> can lead to strikes and a permanent ban.</p></div></details>
+<details><summary>Can the Rewards Program change?</summary><div class="ans"><p>Yes. Reward amounts, limits, prizes and terms can change, and updates are posted in our Terms. We will not unfairly remove coins you already received legitimately.</p><div class="note">Participation is optional and no purchase is required.</div></div></details>
+</section>
+
+</div>
+<p class="empty" id="empty">No matching questions. Try another word or email us at <a href="mailto:officialvibeflickgx@gmail.com">officialvibeflickgx@gmail.com</a>.</p>
+</main>
+
+<footer><div class="wrap">
+  <div class="links"><a href="https://avishkadilshandev.github.io/vibeflick-legal/#DNT">Privacy Policy</a><a href="https://avishkadilshandev.github.io/vibeflick-legal/guidelines.html">Community Guidelines</a><a href="mailto:officialvibeflickgx@gmail.com">Contact us</a></div>
+  <p>This page summarises Section 28 of our Terms and Conditions. If anything differs, the Terms apply.</p>
+  <p style="margin-top:6px">© <span id="y"></span> VibeFlick Gx · Galle, Sri Lanka</p>
+</div></footer>
+
+<script>
+(function(){
+  var secs=[].slice.call(document.querySelectorAll('.sec')),
+      chips=document.getElementById('chips'),q=document.getElementById('q'),
+      empty=document.getElementById('empty'),cat='All';
+  document.getElementById('y').textContent=new Date().getFullYear();
+  ['All'].concat(secs.map(function(s){return s.dataset.cat})).forEach(function(c){
+    var b=document.createElement('button');b.className='chip'+(c==='All'?' on':'');b.textContent=c;
+    b.onclick=function(){cat=c;[].forEach.call(chips.children,function(x){x.classList.toggle('on',x===b)});run()};
+    chips.appendChild(b);
+  });
+  function run(){
+    var t=q.value.trim().toLowerCase(),any=false;
+    secs.forEach(function(s){
+      var show=0;
+      [].forEach.call(s.querySelectorAll('details'),function(d){
+        var ok=(cat==='All'||s.dataset.cat===cat)&&(!t||d.textContent.toLowerCase().indexOf(t)>-1);
+        d.style.display=ok?'':'none';if(ok)show++;
+        if(t&&ok)d.open=true;else if(!t)d.open=false;
+      });
+      s.style.display=show?'':'none';if(show)any=true;
+    });
+    empty.style.display=any?'none':'block';
+  }
+  q.addEventListener('input',run);
+  var h=location.hash.slice(1);
+  if(h){var i=[].map.call(chips.children,function(c){return c.textContent.toLowerCase().replace(/\W+/g,'-')}).indexOf(h);if(i>0)chips.children[i].click()}
+})();
+</script>
+</body>
+</html>
