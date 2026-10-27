@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src https://res.cloudinary.com data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>About VibeFlick – Short videos. Real vibes.</title>
+<meta name="description" content="VibeFlick is a short-video and posts app where you create, share and discover. Built by an independent developer in Sri Lanka.">
+<link rel="icon" href="https://res.cloudinary.com/aqza4uuj/image/upload/v1793002747/vibeflick-icon-512.png">
+<style>
+:root{--ac:#FF3B5C;--ac2:#E62E4D;--bg:#F7F7F9;--card:#fff;--tx:#1A1A1A;--mut:#6B7280;--line:#E5E7EB;--soft:#FFF1F3;--ok:#16A34A}
+:root[data-theme=dark]{--bg:#0F0F10;--card:#1A1A1C;--tx:#F5F5F7;--mut:#A1A1AA;--line:#2B2B2F;--soft:#2A1218}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0F0F10;--card:#1A1A1C;--tx:#F5F5F7;--mut:#A1A1AA;--line:#2B2B2F;--soft:#2A1218}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--ac2);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px;border-radius:6px}
+.w{max-width:860px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:60px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--tx);text-decoration:none}
+.brand img{width:34px;height:34px;border-radius:9px}
+.links{display:flex;gap:16px;font-size:14px;font-weight:600;align-items:center}
+.links a{color:var(--mut);text-decoration:none}.links a:hover{color:var(--ac2)}
+#th{border:1px solid var(--line);background:var(--card);color:var(--tx);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:17px}
+@media(max-width:620px){.links .hide{display:none}}
+.hero{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;padding:64px 0 90px;text-align:center}
+.hero img{width:96px;height:96px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.25);margin-bottom:20px}
+.hero h1{font-size:clamp(34px,7vw,56px);line-height:1.05;letter-spacing:-1.5px;font-weight:800}
+.hero .tag{font-size:clamp(18px,3.5vw,24px);font-weight:600;margin-top:10px;opacity:.95}
+.hero p.s{max-width:560px;margin:18px auto 0;opacity:.95}
+main{margin-top:-46px;padding-bottom:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:20px;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+h2{font-size:22px;margin-bottom:10px;letter-spacing:-.3px}
+h3{font-size:16px;margin-bottom:4px}
+p+p{margin-top:10px}
+.mut{color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:16px}
+.f{border:1px solid var(--line);border-left:4px solid var(--ac);border-radius:12px;padding:14px 16px;background:var(--bg)}
+.f p{font-size:14.5px;color:var(--mut)}
+.why{background:var(--soft);border-color:color-mix(in srgb,var(--ac) 35%,var(--line))}
+.why blockquote{font-size:17px;font-weight:600;line-height:1.55}
+.pill{display:inline-block;background:var(--ac);color:#fff;border-radius:20px;padding:3px 12px;font-size:13px;font-weight:700;margin-bottom:10px}
+dl{display:grid;grid-template-columns:130px 1fr;gap:8px 14px;margin-top:12px;font-size:15px}
+dt{color:var(--mut);font-weight:600}
+@media(max-width:520px){dl{grid-template-columns:1fr;gap:0}dt{margin-top:8px}}
+.pol{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px}
+.pol a{display:block;text-decoration:none;color:var(--tx);border:1px solid var(--line);border-radius:12px;padding:14px;font-weight:700;background:var(--bg)}
+.pol a span{display:block;font-weight:400;font-size:13.5px;color:var(--mut);margin-top:2px}
+.pol a:hover{border-color:var(--ac)}
+ol{padding-left:22px;margin-top:10px}li{margin:6px 0}
+.btn{display:inline-block;margin-top:14px;background:var(--ac);color:#fff;text-decoration:none;font-weight:700;padding:12px 26px;border-radius:26px}
+.btn:hover{background:var(--ac2)}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:24px 18px 50px;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="w">
+  <a class="brand" href="#top"><img src="https://res.cloudinary.com/aqza4uuj/image/upload/v1793002747/vibeflick-icon-512.png" alt="VibeFlick logo" width="34" height="34">VibeFlick</a>
+  <div class="links"><a class="hide" href="#features">Features</a><a class="hide" href="#policies">Policies</a><a href="#delete">Delete account</a><a href="#contact">Contact</a>
+  <button id="th" type="button" aria-label="Switch light or dark theme">◐</button></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="w">
+  <img src="https://res.cloudinary.com/aqza4uuj/image/upload/v1793002747/vibeflick-icon-512.png" alt="VibeFlick app icon" width="96" height="96">
+  <h1>VibeFlick</h1>
+  <p class="tag">Short videos. Real vibes.</p>
+  <p class="s">A place to create, share and discover short videos, posts and voice clips, and to be seen for what you make.</p>
+</div></header>
+
+<main class="w">
+
+<section class="card" id="about">
+  <h2>What is VibeFlick?</h2>
+  <p>VibeFlick is a social app for short-form creativity. Record a video, write a poem, share a thought, post a photo, or drop a voice clip. Follow the creators you like, react, comment, and build a feed that feels like you.</p>
+  <p class="mut">It is built to be simple, friendly and fair: no pay-to-win, clear rules, and tools that keep you in control of your own experience.</p>
+</section>
+
+<section class="card why">
+  <span class="pill">Our story</span>
+  <blockquote>VibeFlick was built by one person, from scratch, with a simple idea: a social app where everyday people can share what they love, get noticed, and have a good time doing it.</blockquote>
+  <p class="mut" style="margin-top:12px">We care about real creativity and real people. That is why the app has clear community rules, in-app reporting and blocking, and a rewards system that does not require spending money. We do not allow scams, fake engagement or harassment, and we work to keep the community safe and welcoming.</p>
+</section>
+
+<section class="card" id="features">
+  <h2>What you can do</h2>
+  <div class="grid">
+    <div class="f"><h3>Short videos</h3><p>Create, upload and share short videos, and discover new creators in your For You feed.</p></div>
+    <div class="f"><h3>Posts and voice clips</h3><p>Share text posts, colored text cards, image posts with hashtags and categories like Poetry, Story and Motivation, plus voice clips.</p></div>
+    <div class="f"><h3>Nearby</h3><p>See thoughts from people close to you, with strict rules against stalking, doxxing and harassment.</p></div>
+    <div class="f"><h3>Interactive Leaderboard</h3><p>Earn VCoins by checking in daily and joining in. Climb the Today and All-time rankings and compete for the daily prizes shown in the app. No purchase is needed to take part.</p></div>
+    <div class="f"><h3>VCoins and gifts</h3><p>Use VCoins to send virtual gifts to creators you enjoy. Optional VCoin packs are bought through Google Play. VCoins have no cash value.</p></div>
+    <div class="f"><h3>VibeFlick Plus</h3><p>An optional subscription with bigger reward amounts, a higher daily cap, a premium badge, profile styles and cash-out access for eligible members.</p></div>
+    <div class="f"><h3>Safety tools</h3><p>Report, block, mute and privacy controls are built in, and every report is reviewed.</p></div>
+    <div class="f"><h3>Fair by design</h3><p>Rewards are based only on activity and ranking, with no element of chance. Cheating, bots and fake accounts are not allowed.</p></div>
+  </div>
+</section>
+
+<section class="card" id="developer">
+  <h2>Developer information</h2>
+  <p>VibeFlick is developed and operated by an independent developer.</p>
+  <dl>
+    <dt>Developer</dt><dd>H.M Avishka Dilshan</dd>
+    <dt>Brand</dt><dd>VibeFlick Gx</dd>
+    <dt>Location</dt><dd>19/1, Henpitagedara, Weerapana, Opatha, Galle, Sri Lanka</dd>
+    <dt>Email</dt><dd><a href="mailto:officialvibeflickgx@gmail.com">officialvibeflickgx@gmail.com</a></dd>
+  </dl>
+</section>
+
+<section class="card" id="policies">
+  <h2>Policies</h2>
+  <p class="mut">Everything you agree to when you use VibeFlick, in plain view.</p>
+  <div class="pol">
+    <a href="https://avishkadilshandev.github.io/vibeflick-legal/#DNT" rel="noopener"><span style="display:inline;color:var(--ac2)">Privacy Policy</span><span>How we collect, use and protect your data</span></a>
+    <a href="https://avishkadilshandev.github.io/vibeflick-legal/terms.html" rel="noopener">Terms and Conditions<span>Rules of use, rewards, purchases and payouts</span></a>
+    <a href="https://avishkadilshandev.github.io/vibeflick-legal/guidelines.html" rel="noopener">Community Guidelines<span>What is and is not allowed, and how strikes work</span></a>
+    <a href="#delete">Account deletion<span>Delete your account and data</span></a>
+  </div>
+</section>
+
+<section class="card" id="delete">
+  <h2>Delete your account and data</h2>
+  <p>You can delete your VibeFlick account and the data linked to it at any time.</p>
+  <h3 style="margin-top:14px">In the app (fastest)</h3>
+  <ol><li>Open VibeFlick and go to <b>Settings</b>.</li><li>Tap <b>Account</b>.</li><li>Tap <b>Delete Account</b> and confirm.</li></ol>
+  <h3 style="margin-top:14px">Without the app</h3>
+  <p>Email <a href="mailto:officialvibeflickgx@gmail.com?subject=VibeFlick%20account%20deletion%20request">officialvibeflickgx@gmail.com</a> from the address on your account, with the subject “Account deletion request” and your username. We will verify and process your request.</p>
+  <p class="mut">What happens: your account and personal information are removed from our active databases. We may keep limited records where needed to prevent fraud and ban evasion, handle disputes, and meet legal duties, as explained in our Privacy Policy. Content you posted is removed when you delete your account.</p>
+</section>
+
+<section class="card" id="contact">
+  <h2>Contact and support</h2>
+  <p>Questions, a bug, a payment problem or feedback? Write to us and we will help.</p>
+  <a class="btn" href="mailto:officialvibeflickgx@gmail.com?subject=VibeFlick%20support">Email support</a>
+  <p class="mut" style="margin-top:12px">Include your username and, for purchases, your Google Play order details. Leaderboard and rewards questions are answered in the <a href="faq.html">Rewards FAQ</a>.</p>
+</section>
+
+</main>
+<footer>© <span id="y">2026</span> VibeFlick Gx · Made in Galle, Sri Lanka. Short videos. Real vibes.</footer>
+
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('th');
+  document.getElementById('y').textContent=new Date().getFullYear();
+  try{var t=localStorage.getItem('vf-theme');if(t==='dark'||t==='light')r.setAttribute('data-theme',t)}catch(e){}
+  b.addEventListener('click',function(){
+    var dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    var n=dark?'light':'dark';r.setAttribute('data-theme',n);
+    try{localStorage.setItem('vf-theme',n)}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
